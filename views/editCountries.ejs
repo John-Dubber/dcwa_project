@@ -1,0 +1,31 @@
+<h3>Edit Country</h3>
+<form method ="POST">
+    <div>
+        <label>Country Code</label>
+        <input
+            readonly
+            type= "text"
+            value="<%= country.co_code%>">
+        </input>
+    </div>
+    <div>
+        <label>Country Name</label>
+        <input
+            type= "text"
+            value="<%= country.co_name%>"
+            name=co_name>
+        </input>
+    </div>
+    <div>
+        <label>Country Details</label>
+        <input
+            type= "textarea"
+            value="<%= country.co_details%>"
+            name=co_details>
+        </input>
+    </div>
+    <div>
+        <input type="submit">
+        </input>
+    </div>
+</form>

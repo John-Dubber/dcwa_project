@@ -1,0 +1,37 @@
+<style>
+    table {border: 2px solid black}
+    th{ border: 2px solid black}
+    td {border: 2px solid black}
+</style>
+<h1>Countries</h1>
+<Button><a href="/addCountry">Add Country</a></Button>
+<br><br>
+<table>
+    <tr>
+        <th>Country Code</th>
+        <th>Country Name</th>
+        <th>Country Details</th>
+        <th>Action</th>
+        <% countries.forEach((country)=>{ %>
+    <tr>
+
+        <td>
+            <%= country.co_code%>
+        </td>
+        <td>
+            <%= country.co_name%>
+        </td>
+        <td>
+            <%= country.co_details%>
+        </td>
+        <td>
+            <a href="/countries/edit/<%=country.co_code%>">Update</a>
+        </td>
+        <td>
+            <a href="countries/delete/<%=country.co_code%>">Delete</a>
+        </td>
+
+    </tr>
+    <% }) %>
+</table>
+<a href="../">home</a>
